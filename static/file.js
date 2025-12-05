@@ -83,6 +83,14 @@ const GATEWAY_CONFIG = [
     {
         id: 'gw-ipfsbed-0',
         name: 'Gateway0',
+        pingUrl: 'https://ipfsbed-6qd.pages.dev/api/v0/version',
+        addFileUrl: 'https://ipfsbed-6qd.pages.dev/api/v0/add?pin=false',
+        addDirUrl: 'https://ipfsbed-6qd.pages.dev/api/v0/add?pin=false&recursive=true&wrap-with-directory=true',
+        latency: Infinity
+    },
+    {
+        id: 'gw-ipfsbed-11',
+        name: 'Gateway11',
         pingUrl: 'https://gw-ipfsbed.is-an.org/api/v0/version',
         addFileUrl: 'https://gw-ipfsbed.is-an.org/api/v0/add?pin=false',
         addDirUrl: 'https://gw-ipfsbed.is-an.org/api/v0/add?pin=false&recursive=true&wrap-with-directory=true',
@@ -992,6 +1000,7 @@ function copyShareLink(button) {
 function seeding(res) {
     const gateways = [
         // 主流公共网关
+        'https://ipfsbed-6qd.pages.dev',
         'https://gw.crustgw.work',
         'https://i0.img2ipfs.com/ipfs/',
         'https://cdn.ipfsscan.io/ipfs/',
